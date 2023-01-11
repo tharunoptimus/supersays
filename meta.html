@@ -6,14 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@&4.0.0/dist/aframe-event-set-component.min.js"></script>
-    <script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
+    <!-- <script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.controls.min.js"></script>
 
     <title>Document</title>
 </head>
 <body>
     <a-scene>
 
-        <a-entity progressive-controls></a-entity>
+        <a-entity id="rig" movement-controls>
+
+            <a-camera position="0 1.6 0"></a-camera>
+          
+           
+          
+            <a-entity id="left-con" oculus-touch-controls="hand: left"></a-entity>
+          
+            <a-entity id="right-con" oculus-touch-controls="hand: right"></a-entity>
+          
+          </a-entity>
+
+        <!-- <a-entity progressive-controls></a-entity> -->
 
         <a-box id="screen" color="#212121" position="0 2.75 -9" scale="8 4 0.1" 
         event-set__rescol="_event: click; color: #212121">
