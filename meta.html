@@ -13,6 +13,28 @@
 <body>
     <a-scene>
 
+        <a-entity progressive-controls></a-entity>
+
+        <a-box id="screen" color="#212121" position="0 2.75 -9" scale="8 4 0.1" 
+        event-set__rescol="_event: click; color: #212121">
+        </a-box>
+
+        <a-box color="#212121" position="-2.25 0 -9" scale="2 1 0.1" hoverable 
+        event-set__enter="_event: hover-start; color: #AA0000"
+        event-set__leave="_event: hover-end; color: #212121"
+        event-set__click="_event: click; _target: #screen; color: #00AA00"></a-box>
+        
+        <a-box color="#212121" position="0 0 -9" scale="2 1 0.1" hoverable 
+        event-set__enter="_event: hover-start; color: #AA0000"
+        event-set__leave="_event: hover-end; color: #212121"
+        event-set__click="_event: click; _target: #screen; color: #00AA00"></a-box>
+        
+        <a-box color="#212121" position="2.25 0 -9" scale="2 1 0.1" hoverable 
+        event-set__enter="_event: hover-start; color: #AA0000"
+        event-set__leave="_event: hover-end; color: #212121"
+        event-set__click="_event: click; _target: #screen; color: #00AA00"></a-box>
+
+        <a-sky></a-sky>
         
     </a-scene>
 </body>
